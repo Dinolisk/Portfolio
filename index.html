@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Ore - Frontend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .skill-bar {
+            animation: fillBar 2s ease-in-out;
+        }
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Daniel</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition">Home</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-purple-600 transition">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-purple-600 transition">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="#projects" class="block text-gray-700 hover:text-purple-600 transition">Projects</a>
+                <a href="#skills" class="block text-gray-700 hover:text-purple-600 transition">Skills</a>
+                <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Hi, I'm <span class="gradient-text">Daniel</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">Frontend Developer</p>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
+                Junior Frontend Developer with a background in Quality Assurance (QA). 
+                Passionate about creating user-friendly interfaces and building responsive web applications 
+                with modern technologies like JavaScript, React, and test automation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="#contact" class="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition transform hover:scale-105">
+                    Get In Touch
+                </a>
+            </div>
+            <div class="mt-16 flex justify-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-purple-600 transition text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-purple-600 transition text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-purple-600 transition text-2xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Featured <span class="gradient-text">Projects</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card-hover bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-400"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Gardeco POS System</h3>
+                        <p class="text-gray-600 mb-4">Frontend development for Gardeco's POS system with focus on usability and external service integration</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">API Integration</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-purple-600 hover:text-purple-700">
+                                <i class="fas fa-briefcase"></i> Internship Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card-hover bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-400"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Excel Automation Solutions</h3>
+                        <p class="text-gray-600 mb-4">VBA automation that improved efficiency and reduced scheduling time at Jobbklar AB</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">VBA</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Excel</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Automation</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-700">
+                                <i class="fas fa-briefcase"></i> Work Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card-hover bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-400"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Test Automation Framework</h3>
+                        <p class="text-gray-600 mb-4">Automated test strategies using Cypress to ensure code quality and system functionality</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Cypress</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Testing</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">QA</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-green-600 hover:text-green-700">
+                                <i class="fas fa-graduation-cap"></i> Course Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Technical <span class="gradient-text">Skills</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Frontend Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Frontend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>HTML/CSS</span>
+                                <span class="text-purple-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript/React</span>
+                                <span class="text-purple-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Test Automation (Cypress)</span>
+                                <span class="text-purple-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>UX/UI Design (Figma)</span>
+                                <span class="text-purple-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Other Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Tools & Technologies</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Java/PHP</span>
+                                <span class="text-purple-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>MySQL</span>
+                                <span class="text-purple-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Excel/VBA Automation</span>
+                                <span class="text-purple-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Agile/Scrum</span>
+                                <span class="text-purple-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Get In <span class="gradient-text">Touch</span>
+            </h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-center text-gray-600 mb-12">
+                    I'm always interested in hearing about new projects and opportunities. 
+                    Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Email</h3>
+                        <a href="mailto:daniel_ore@outlook.com" class="text-purple-600 hover:text-purple-700">
+                            daniel_ore@outlook.com
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Phone</h3>
+                        <a href="tel:0700144662" class="text-purple-600 hover:text-purple-700">
+                            0700144662
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="mailto:daniel_ore@outlook.com" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition transform hover:scale-105 inline-block">
+                        Send Me a Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-purple-400 transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="hover:text-purple-400 transition">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="hover:text-purple-400 transition">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="hover:text-purple-400 transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+            <p>&copy; Daniel 2026. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
