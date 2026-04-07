@@ -82,13 +82,14 @@ window.addEventListener('scroll', () => {
 });
 
 // Add typing effect to hero title
-function typeWriter(element, text, speed = 100) {
+function typeWriter(element, speed = 100) {
+    const text = element.textContent;
+    element.textContent = '';
     let i = 0;
-    element.innerHTML = '';
     
     function type() {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+            element.textContent += text.charAt(i);
             i++;
             setTimeout(type, speed);
         }
@@ -101,9 +102,8 @@ function typeWriter(element, text, speed = 100) {
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('#home h1');
     if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
+            typeWriter(heroTitle, 50);
         }, 500);
     }
 });
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const year = new Date().getFullYear();
     const footerYear = document.querySelector('footer p');
     if (footerYear) {
-        footerYear.innerHTML = `&copy; ${year} Your Name. All rights reserved.`;
+        footerYear.innerHTML = `&copy; ${year} Daniel. All rights reserved.`;
     }
 });
 
