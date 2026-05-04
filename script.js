@@ -98,13 +98,13 @@ function typeWriter(element, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
+// Initialize typing effect when page loads — targets subtitle to preserve h1 gradient HTML
 window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('#home h1');
-    if (heroTitle) {
+    const subtitle = document.querySelector('#home p.text-xl');
+    if (subtitle) {
         setTimeout(() => {
-            typeWriter(heroTitle, 50);
-        }, 500);
+            typeWriter(subtitle, 60);
+        }, 700);
     }
 });
 
@@ -189,3 +189,4 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
